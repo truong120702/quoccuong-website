@@ -10,7 +10,7 @@
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Cung Ứng Lao Động Quốc Cường - Giúp Việc Nhà TP.HCM">
   <meta property="og:description" content="Cung Ứng Lao Động Quốc Cường - Giúp việc nhà, chăm sóc trẻ em, người già uy tín tại TP.HCM. Liên hệ ngay: 0385 632 861!">
-  <meta property="og:image" content="https://truong120702.github.io/quoccuong-website/images/hero-image.jpg">
+  <meta property="og:image" content="https://truong120702.github.io/quoccuong-website/images/logo-quoc-cuong.png">
   <meta property="og:url" content="https://truong120702.github.io/quoccuong-website/">
   <meta property="og:type" content="website">
   <!-- Favicon -->
@@ -25,7 +25,7 @@
       background-image: url('images/logo-quoc-cuong.png');
       background-repeat: repeat;
       background-attachment: fixed;
-      background-size: 200px 200px;
+      background-size: 120px 120px;
       position: relative;
     }
     /* Lớp phủ mờ cho hình nền */
@@ -36,89 +36,325 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.5); /* Giảm độ mờ xuống 0.5 */
+      background-color: rgba(255, 255, 255, 0.8);
       z-index: -1;
     }
-    /* Custom styles for mobile responsiveness */
-    @media (max-width: 640px) {
-      .nav-menu {
-        display: none;
-      }
-      .nav-menu.active {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: #7dd3fc;
-        padding: 10px 0;
-      }
-      .nav-menu.active li {
-        margin: 10px 0;
-        text-align: center;
-      }
-      .hamburger {
-        display: block;
-      }
-      .header-logo {
-        display: none;
-      }
-      .header-contact {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 8px;
-      }
+    /* Header styles */
+    header {
+      background-color: #e0f7fa;
+      padding: 10px 15px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    @media (min-width: 641px) {
-      .hamburger {
-        display: none;
-      }
-      .header-contact {
-        display: flex;
-      }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    /* Text shadow for better contrast */
-    .hero-text {
-      text-shadow: 1px 1px 2px white;
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header-logo img {
+      height: 40px;
+    }
+    .header-logo h1 {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .header-contact {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header-contact span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #333;
+    }
+    .header-contact a {
+      background-color: #0288d1;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+    }
+    .header-contact a img {
+      width: 20px;
+      height: 20px;
+    }
+    .header-contact a:hover {
+      background-color: #0277bd;
+    }
+    .hamburger {
+      display: block;
+      cursor: pointer;
+    }
+    .hamburger svg {
+      width: 24px;
+      height: 24px;
+    }
+    .nav-menu {
+      display: none;
+    }
+    .nav-menu.active {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #b3e5fc;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .nav-menu li {
+      margin: 8px 0;
+      text-align: center;
+    }
+    .nav-menu li a {
+      font-size: 1rem;
+      color: #333;
+      text-decoration: none;
+    }
+    .nav-menu li a:hover {
+      text-decoration: underline;
     }
     /* Floating Button Animation */
     @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
+      0%, 100% {
         transform: translateY(0);
       }
-      40% {
-        transform: translateY(-10px);
-      }
-      60% {
-        transform: translateY(-5px);
+      50% {
+        transform: translateY(-6px);
       }
     }
     .float-buttons {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 15px;
+      right: 15px;
       z-index: 50;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 12px;
     }
     .float-button {
-      animation: bounce 2s infinite;
+      animation: bounce 3s infinite;
+      padding: 12px 24px;
+      background-color: #0288d1;
+      color: white;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      font-size: 0.9rem;
     }
     .float-button img {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
+    }
+    .float-button:hover {
+      background-color: #0277bd;
     }
     /* Tag styles */
     .maid-tag {
       display: inline-block;
-      background-color: #38bdf8;
+      background-color: #0288d1;
       color: white;
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: 12px;
       font-size: 12px;
-      margin: 2px;
+      margin: 3px;
+    }
+    /* Responsive images */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Hero Section */
+    .hero-section {
+      height: 60vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #333;
+    }
+    .hero-section .hero-content {
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
+    }
+    .hero-section h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+    }
+    .hero-section p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+    }
+    .hero-section a {
+      background-color: #0288d1;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    .hero-section a:hover {
+      background-color: #0277bd;
+    }
+    /* Section styles */
+    section {
+      padding: 40px 15px;
+    }
+    section h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0288d1;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    section p {
+      font-size: 1rem;
+      color: #333;
+    }
+    /* Responsive for Mobile */
+    @media (max-width: 640px) {
+      .header-container {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .header-logo img {
+        height: 35px;
+      }
+      .header-logo h1 {
+        font-size: 0.9rem;
+      }
+      .header-contact {
+        justify-content: space-between;
+        width: 100%;
+      }
+      .header-contact span {
+        font-size: 0.85rem;
+      }
+      .header-contact a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+      }
+      .header-contact a img {
+        width: 18px;
+        height: 18px;
+      }
+      .nav-menu.active {
+        top: 80px;
+      }
+      .hero-section {
+        height: 50vh;
+      }
+      .hero-section h2 {
+        font-size: 1.25rem;
+      }
+      .hero-section p {
+        font-size: 0.9rem;
+      }
+      .hero-section a {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+      section {
+        padding: 30px 10px;
+      }
+      section h3 {
+        font-size: 1.25rem;
+      }
+      section p {
+        font-size: 0.9rem;
+      }
+    }
+    /* Responsive for Desktop */
+    @media (min-width: 641px) {
+      .header-container {
+        flex-wrap: nowrap;
+      }
+      .header-logo img {
+        height: 50px;
+      }
+      .header-logo h1 {
+        font-size: 1.5rem;
+      }
+      .header-contact {
+        gap: 15px;
+      }
+      .header-contact span {
+        font-size: 1.1rem;
+      }
+      .header-contact a {
+        font-size: 1.1rem;
+        padding: 8px 16px;
+      }
+      .header-contact a img {
+        width: 24px;
+        height: 24px;
+      }
+      .hamburger {
+        display: none;
+      }
+      .nav-menu {
+        display: flex;
+        gap: 20px;
+      }
+      .nav-menu li a {
+        font-size: 1.1rem;
+      }
+      .hero-section {
+        height: 80vh;
+      }
+      .hero-section h2 {
+        font-size: 2.5rem;
+      }
+      .hero-section p {
+        font-size: 1.25rem;
+      }
+      .hero-section a {
+        font-size: 1.25rem;
+        padding: 12px 24px;
+      }
+      section {
+        padding: 60px 20px;
+      }
+      section h3 {
+        font-size: 2rem;
+      }
+      section p {
+        font-size: 1.1rem;
+      }
+      .float-button {
+        font-size: 1rem;
+        padding: 14px 28px;
+      }
+      .float-button img {
+        width: 24px;
+        height: 24px;
+      }
     }
   </style>
   <!-- Schema Markup -->
@@ -136,55 +372,55 @@
     },
     "telephone": "0385632861",
     "url": "https://truong120702.github.io/quoccuong-website/",
-    "image": "https://truong120702.github.io/quoccuong-website/images/hero-image.jpg"
+    "image": "https://truong120702.github.io/quoccuong-website/images/logo-quoc-cuong.png"
   }
   </script>
 </head>
 <body class="font-sans">
   <!-- Floating Buttons -->
   <div class="float-buttons">
-    <a href="https://www.tiktok.com/@giupviecnhahcm" target="_blank" rel="noopener noreferrer" class="float-button bg-sky-600 text-white px-4 py-2 rounded-full flex items-center shadow-lg hover:bg-sky-700">
+    <a href="https://www.tiktok.com/@giupviecnhahcm" target="_blank" rel="noopener noreferrer" class="float-button">
       <img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png" alt="TikTok Icon" class="mr-2">
       TikTok
     </a>
-    <a href="tel:0385632861" class="float-button bg-sky-600 text-white px-4 py-2 rounded-full flex items-center shadow-lg hover:bg-sky-700">
+    <a href="tel:0385632861" class="float-button">
       <img src="https://cdn-icons-png.flaticon.com/512/126/126509.png" alt="Phone Icon" class="mr-2">
       Gọi
     </a>
-    <a href="https://zalo.me/0385632861" target="_blank" rel="noopener noreferrer" class="float-button bg-sky-600 text-white px-4 py-2 rounded-full flex items-center shadow-lg hover:bg-sky-700">
+    <a href="https://zalo.me/0385632861" target="_blank" rel="noopener noreferrer" class="float-button">
       <img src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png" alt="Zalo Icon" class="mr-2">
       Chat Zalo
     </a>
   </div>
 
   <!-- Header -->
-  <header class="bg-sky-200 text-black p-4 fixed top-0 w-full shadow-md z-10 min-h-[70px]">
-    <div class="container mx-auto flex justify-between items-center">
-      <div class="header-logo flex items-center space-x-2">
-        <img src="images/logo-quoc-cuong.png" alt="Logo Quốc Cường" class="h-10 sm:h-12">
-        <h1 class="text-lg sm:text-xl font-bold">Cung Ứng Lao Động Quốc Cường</h1>
+  <header>
+    <div class="header-container">
+      <div class="header-logo">
+        <img src="images/logo-quoc-cuong.png" alt="Logo Quốc Cường">
+        <h1>Cung Ứng Lao Động Quốc Cường</h1>
       </div>
-      <div class="header-contact flex items-center space-x-2 sm:space-x-4 flex-wrap">
-        <span class="text-xs sm:text-lg font-semibold">Hotline: 0385 632 861</span>
-        <a href="https://zalo.me/0385632861" target="_blank" rel="noopener noreferrer" class="bg-sky-600 text-white px-2 sm:px-4 py-1 sm:py-2 rounded hover:bg-sky-700 flex items-center text-xs sm:text-lg">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png" alt="Zalo Icon" class="w-5 h-5 sm:w-6 sm:h-6 mr-1">
+      <div class="header-contact">
+        <span>Hotline: 0385 632 861</span>
+        <a href="https://zalo.me/0385632861" target="_blank" rel="noopener noreferrer">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png" alt="Zalo Icon">
           Chat Zalo
         </a>
-        <button class="hamburger text-black sm:hidden focus:outline-none" onclick="toggleMenu()">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <button class="hamburger" onclick="toggleMenu()">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </button>
         <nav>
-          <ul class="nav-menu flex space-x-2 sm:space-x-4">
-            <li><a href="#home" class="hover:underline text-base sm:text-base">Trang Chủ</a></li>
-            <li><a href="#about" class="hover:underline text-base sm:text-base">Giới Thiệu</a></li>
-            <li><a href="#services" class="hover:underline text-base sm:text-base">Dịch Vụ</a></li>
-            <li><a href="#process" class="hover:underline text-base sm:text-base">Quy Trình</a></li>
-            <li><a href="#why-us" class="hover:underline text-base sm:text-base">Lý Do Chọn</a></li>
-            <li><a href="#team" class="hover:underline text-base sm:text-base">Đội Ngũ</a></li>
-            <li><a href="#testimonials" class="hover:underline text-base sm:text-base">Đánh Giá</a></li>
-            <li><a href="#contact" class="hover:underline text-base sm:text-base">Liên Hệ</a></li>
+          <ul class="nav-menu">
+            <li><a href="#home">Trang Chủ</a></li>
+            <li><a href="#about">Giới Thiệu</a></li>
+            <li><a href="#services">Dịch Vụ</a></li>
+            <li><a href="#process">Quy Trình</a></li>
+            <li><a href="#why-us">Lý Do Chọn</a></li>
+            <li><a href="#team">Đội Ngũ</a></li>
+            <li><a href="#testimonials">Đánh Giá</a></li>
+            <li><a href="#contact">Liên Hệ</a></li>
           </ul>
         </nav>
       </div>
@@ -192,28 +428,28 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="bg-cover bg-center h-screen text-center text-black flex items-center justify-center" style="background-image: url('images/hero-image.jpg');">
-    <div class="p-8 sm:p-12 bg-white bg-opacity-70 rounded">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-4 hero-text">Dịch Vụ Lao Động Gia Đình Uy Tín</h2>
-      <p class="text-lg sm:text-xl mb-6 hero-text">Cung cấp giải pháp giúp việc nhà, chăm sóc trẻ em, và chăm sóc người già tại TP.HCM.</p>
-      <a href="tel:0385632861" class="bg-sky-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded hover:bg-sky-600 text-base sm:text-lg">Liên Hệ Ngay: 0385 632 861</a>
+  <section id="home" class="hero-section" style="background-image: url('images/hero-image.jpg');">
+    <div class="hero-content">
+      <h2>Dịch Vụ Lao Động Gia Đình Uy Tín</h2>
+      <p>Cung cấp giải pháp giúp việc nhà, chăm sóc trẻ em, và chăm sóc người già tại TP.HCM.</p>
+      <a href="tel:0385632861">Liên Hệ Ngay: 0385 632 861</a>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 bg-white">
+  <section id="about" class="bg-white">
     <div class="container mx-auto text-center px-4">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-sky-700">Giới Thiệu Về Quốc Cường</h3>
-      <p class="text-base sm:text-lg max-w-3xl mx-auto mb-6">Quốc Cường Cung Ứng Lao Động chuyên cung cấp lao động gia đình uy tín tại TP.HCM, đặc biệt ở Quận Bình Thạnh. Chúng tôi mang đến đội ngũ giúp việc nhà, chăm sóc trẻ em, và chăm sóc người già chuyên nghiệp, tận tâm, đáp ứng mọi nhu cầu của gia đình hiện đại.</p>
-      <img src="images/team-image.jpg" alt="Đội ngũ lao động" class="mx-auto rounded-lg shadow-lg w-full sm:w-1/2" loading="lazy">
+      <h3>Giới Thiệu Về Quốc Cường</h3>
+      <p class="max-w-3xl mx-auto mb-6">Quốc Cường Cung Ứng Lao Động chuyên cung cấp lao động gia đình uy tín tại TP.HCM, đặc biệt ở Quận Bình Thạnh. Chúng tôi mang đến đội ngũ giúp việc nhà, chăm sóc trẻ em, và chăm sóc người già chuyên nghiệp, tận tâm, đáp ứng mọi nhu cầu của gia đình hiện đại.</p>
+      <img src="images/team-image.jpg" alt="Đội ngũ lao động Quốc Cường" class="mx-auto rounded-lg shadow-lg w-full sm:w-1/2" loading="lazy">
     </div>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="bg-gray-100 py-20">
+  <section id="services" class="bg-gray-100">
     <div class="container mx-auto px-4">
-      <h3 class="text-2xl sm:text-3xl font-bold text-center mb-10 text-sky-700">Dịch Vụ Của Chúng Tôi</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <h3>Dịch Vụ Của Chúng Tôi</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
         <div class="bg-white p-6 rounded-lg shadow-lg text-center">
           <img src="images/childcare-image.jpg" alt="Chăm sóc trẻ em uy tín tại TP.HCM" class="w-full h-40 object-cover rounded mb-4" loading="lazy">
           <h4 class="text-lg sm:text-xl font-semibold mb-2">Chăm Sóc Trẻ Em</h4>
@@ -239,27 +475,27 @@
   </section>
 
   <!-- Process Section -->
-  <section id="process" class="py-20 bg-white">
+  <section id="process" class="bg-white">
     <div class="container mx-auto text-center px-4">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-10 text-sky-700">Quy Trình Làm Việc</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <h3>Quy Trình Làm Việc</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
         <div class="p-4 sm:p-6">
-          <img src="images/contact-image.jpg" alt="Liên hệ" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
+          <img src="images/contact-image.jpg" alt="Liên hệ với Quốc Cường" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
           <h4 class="text-lg sm:text-xl font-semibold mb-2">1. Liên Hệ</h4>
           <p class="text-base sm:text-lg">Khách hàng liên hệ qua hotline hoặc form để gửi yêu cầu.</p>
         </div>
         <div class="p-4 sm:p-6">
-          <img src="images/select-image.jpg" alt="Chọn lao động" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
+          <img src="images/select-image.jpg" alt="Chọn lao động phù hợp" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
           <h4 class="text-lg sm:text-xl font-semibold mb-2">2. Chọn Lao Động</h4>
           <p class="text-base sm:text-lg">Chúng tôi tuyển chọn lao động phù hợp với nhu cầu của bạn.</p>
         </div>
         <div class="p-4 sm:p-6">
-          <img src="images/contract-image.jpg" alt="Ký hợp đồng" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
+          <img src="images/contract-image.jpg" alt="Ký hợp đồng minh bạch" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
           <h4 class="text-lg sm:text-xl font-semibold mb-2">3. Ký Hợp Đồng</h4>
           <p class="text-base sm:text-lg">Ký hợp đồng minh bạch, đảm bảo quyền lợi hai bên.</p>
         </div>
         <div class="p-4 sm:p-6">
-          <img src="images/start-image.jpg" alt="Bắt đầu làm việc" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
+          <img src="images/start-image.jpg" alt="Bắt đầu làm việc với lao động" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
           <h4 class="text-lg sm:text-xl font-semibold mb-2">4. Bắt Đầu Làm Việc</h4>
           <p class="text-base sm:text-lg">Lao động bắt đầu làm việc, chúng tôi hỗ trợ liên tục.</p>
         </div>
@@ -268,22 +504,22 @@
   </section>
 
   <!-- Why Us Section -->
-  <section id="why-us" class="bg-gray-100 py-20">
+  <section id="why-us" class="bg-gray-100">
     <div class="container mx-auto text-center px-4">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-10 text-sky-700">Lý Do Chọn Quốc Cường</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <h3>Lý Do Chọn Quốc Cường</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
         <div class="p-4 sm:p-6">
-          <img src="images/professional-image.jpg" alt="Lao động chuyên nghiệp" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
+          <img src="images/professional-image.jpg" alt="Lao động chuyên nghiệp Quốc Cường" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
           <h4 class="text-lg sm:text-xl font-semibold mb-2">Lao Động Chuyên Nghiệp</h4>
           <p class="text-base sm:text-lg">Đội ngũ được đào tạo kỹ lưỡng, tận tâm với công việc.</p>
         </div>
         <div class="p-4 sm:p-6">
-          <img src="images/flexible-image.jpg" alt="Dịch vụ linh hoạt" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
+          <img src="images/flexible-image.jpg" alt="Dịch vụ linh hoạt tại TP.HCM" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
           <h4 class="text-lg sm:text-xl font-semibold mb-2">Dịch Vụ Linh Hoạt</h4>
           <p class="text-base sm:text-lg">Đáp ứng nhanh chóng, phù hợp với mọi nhu cầu gia đình.</p>
         </div>
         <div class="p-4 sm:p-6">
-          <img src="images/satisfaction-image.jpg" alt="Cam kết hài lòng" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
+          <img src="images/satisfaction-image.jpg" alt="Cam kết hài lòng khách hàng" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
           <h4 class="text-lg sm:text-xl font-semibold mb-2">Cam Kết Hài Lòng</h4>
           <p class="text-base sm:text-lg">Đảm bảo chất lượng dịch vụ, hỗ trợ thay đổi nếu cần.</p>
         </div>
@@ -292,17 +528,17 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="py-20 bg-white">
+  <section id="testimonials" class="bg-white">
     <div class="container mx-auto text-center px-4">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-10 text-sky-700">Khách Hàng Nói Gì Về Chúng Tôi</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-4xl mx-auto">
+      <h3>Khách Hàng Nói Gì Về Chúng Tôi</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 max-w-4xl mx-auto">
         <div class="bg-gray-100 p-4 sm:p-6 rounded-lg shadow-lg">
-          <img src="images/family-image.jpg" alt="Gia đình hạnh phúc" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
+          <img src="images/family-image.jpg" alt="Gia đình hạnh phúc tại Quận 3" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
           <p class="text-base sm:text-lg mb-4">"Tôi rất hài lòng với dịch vụ chăm sóc trẻ em của Quốc Cường. Người giúp việc rất tận tâm và chuyên nghiệp, giúp tôi yên tâm đi làm."</p>
           <p class="font-semibold text-base sm:text-lg">— Chị Nguyễn Thị Lan, Quận 3</p>
         </div>
         <div class="bg-gray-100 p-4 sm:p-6 rounded-lg shadow-lg">
-          <img src="images/worker-image.jpg" alt="Người giúp việc" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
+          <img src="images/worker-image.jpg" alt="Người giúp việc tại Quận 7" class="mx-auto mb-4 rounded w-20 h-20 sm:w-24 sm:h-24" loading="lazy">
           <p class="text-base sm:text-lg mb-4">"Dịch vụ giúp việc nhà của Quốc Cường thật sự tuyệt vời. Nhà cửa luôn sạch sẽ, cơm nước chu đáo, rất đáng tin cậy."</p>
           <p class="font-semibold text-base sm:text-lg">— Anh Trần Văn Hùng, Quận 7</p>
         </div>
@@ -311,12 +547,12 @@
   </section>
 
   <!-- Team Section (Danh Sách Cô Giúp Việc) -->
-  <section id="team" class="py-20 bg-gray-100">
+  <section id="team" class="bg-gray-100">
     <div class="container mx-auto text-center px-4">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-10 text-sky-700">Danh Sách Cô Giúp Việc</h3>
+      <h3>Danh Sách Cô Giúp Việc</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10 max-w-4xl mx-auto" id="maid-list">
         <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg maid-item">
-          <img src="images/co-lan.jpg" alt="Cô Lan" class="mx-auto mb-4 rounded-full w-24 h-24 sm:w-32 sm:h-32 object-cover maid-image" loading="lazy">
+          <img src="images/co-lan.jpg" alt="Cô Lan - Chuyên giúp việc nhà" class="mx-auto mb-4 rounded-full w-24 h-24 sm:w-32 sm:h-32 object-cover maid-image" loading="lazy">
           <h4 class="text-lg sm:text-xl font-semibold mb-2 maid-name">Cô Lan</h4>
           <p class="text-base sm:text-lg maid-description">Chuyên giúp việc nhà, 5 năm kinh nghiệm.</p>
           <div class="maid-tags mt-2">
@@ -325,7 +561,7 @@
           </div>
         </div>
         <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg maid-item">
-          <img src="images/co-huong.jpg" alt="Cô Hương" class="mx-auto mb-4 rounded-full w-24 h-24 sm:w-32 sm:h-32 object-cover maid-image" loading="lazy">
+          <img src="images/co-huong.jpg" alt="Cô Hương - Chăm sóc trẻ em" class="mx-auto mb-4 rounded-full w-24 h-24 sm:w-32 sm:h-32 object-cover maid-image" loading="lazy">
           <h4 class="text-lg sm:text-xl font-semibold mb-2 maid-name">Cô Hương</h4>
           <p class="text-base sm:text-lg maid-description">Chăm sóc trẻ em, tận tâm, 3 năm kinh nghiệm.</p>
           <div class="maid-tags mt-2">
@@ -334,7 +570,7 @@
           </div>
         </div>
         <div class="bg-white p-4 sm:p-6 rounded-lg shadow-lg maid-item">
-          <img src="images/co-mai.jpg" alt="Cô Mai" class="mx-auto mb-4 rounded-full w-24 h-24 sm:w-32 sm:h-32 object-cover maid-image" loading="lazy">
+          <img src="images/co-mai.jpg" alt="Cô Mai - Chăm sóc người già" class="mx-auto mb-4 rounded-full w-24 h-24 sm:w-32 sm:h-32 object-cover maid-image" loading="lazy">
           <h4 class="text-lg sm:text-xl font-semibold mb-2 maid-name">Cô Mai</h4>
           <p class="text-base sm:text-lg maid-description">Chăm sóc người già, chu đáo, 4 năm kinh nghiệm.</p>
           <div class="maid-tags mt-2">
@@ -350,29 +586,29 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-100">
+  <section id="contact" class="bg-gray-100">
     <div class="container mx-auto text-center px-4">
-      <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-sky-700">Liên Hệ Với Chúng Tôi</h3>
-      <p class="text-base sm:text-lg mb-6">Hãy gửi yêu cầu để được tư vấn và hỗ trợ nhanh nhất!</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-4xl mx-auto">
+      <h3>Liên Hệ Với Chúng Tôi</h3>
+      <p class="mb-6">Hãy gửi yêu cầu để được tư vấn và hỗ trợ nhanh nhất!</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 max-w-4xl mx-auto">
         <div>
           <h4 class="text-lg sm:text-xl font-semibold mb-4">Thông Tin Liên Hệ</h4>
           <p class="mb-2 text-base sm:text-lg"><strong>Địa chỉ:</strong> 220/58 Xô Viết Nghệ Tĩnh, Phường 21, Quận Bình Thạnh, TP. Hồ Chí Minh</p>
           <p class="mb-2 text-base sm:text-lg"><strong>Hotline:</strong> 0385 632 861</p>
-          <p class="mb-2 text-base sm:text-lg"><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b2959b8782849b979183879d9191879d9c95c0c4cab2959f939b9edc919d9f">[email protected]</a></p>
+          <p class="mb-2 text-base sm:text-lg"><strong>Email:</strong> <a href="mailto:quoccuong@giupviecnhahcm.com">quoccuong@giupviecnhahcm.com</a></p>
           <div class="mt-4">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.124768497384!2d106.701145!3d10.801174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d5e0e9c0d1%3A0x4c5b0c5f4f5e5c5a!2s220%2F58%20X%C3%B4%20Vi%E1%BA%BFt%20Ngh%E1%BB%87%20T%C4%A9nh%2C%20Ph%C6%B0%E1%BB%9Dng%2021%2C%20B%C3%ACnh%20Th%E1%BA%A1nh%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh%2C%20Vi%E1%BB%87t%20Nam!5e0!3m2!1svi!2s!4v1698771234567!5m2!1svi!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
         <div>
           <h4 class="text-lg sm:text-xl font-semibold mb-4">Gửi Yêu Cầu</h4>
-          <form action="https://formspree.io/f/yourformid" method="POST" class="max-w-md mx-auto">
+          <div class="max-w-md mx-auto">
             <input type="text" name="name" placeholder="Họ và Tên" class="w-full p-3 mb-4 border rounded text-base sm:text-lg" required>
             <input type="email" name="email" placeholder="Email" class="w-full p-3 mb-4 border rounded text-base sm:text-lg" required>
             <input type="text" name="phone" placeholder="Số điện thoại" class="w-full p-3 mb-4 border rounded text-base sm:text-lg" required>
             <textarea name="message" placeholder="Nội dung yêu cầu" class="w-full p-3 mb-4 border rounded h-32 text-base sm:text-lg" required></textarea>
-            <button type="submit" class="bg-sky-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded hover:bg-sky-600 text-base sm:text-lg">Gửi</button>
-          </form>
+            <button onclick="alert('Tính năng gửi form đang được phát triển. Vui lòng liên hệ qua hotline hoặc Zalo!')" class="bg-sky-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded hover:bg-sky-600 text-base sm:text-lg">Gửi</button>
+          </div>
         </div>
       </div>
     </div>
@@ -392,29 +628,8 @@
     </div>
   </footer>
 
-  <!-- JavaScript for Form Submission Feedback and Hamburger Menu -->
+  <!-- JavaScript for Hamburger Menu -->
   <script>
-    // Form Submission Feedback
-    document.querySelector('form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      fetch(this.action, {
-        method: 'POST',
-        body: new FormData(this),
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(response => {
-        if (response.ok) {
-          alert('Cảm ơn! Yêu cầu của bạn đã được gửi.');
-          this.reset();
-        } else {
-          alert('Có lỗi, vui lòng thử lại.');
-        }
-      })
-      .catch(error => {
-        alert('Có lỗi, vui lòng thử lại.');
-      });
-    });
-
     function toggleMenu() {
       const menu = document.querySelector('.nav-menu');
       menu.classList.toggle('active');
